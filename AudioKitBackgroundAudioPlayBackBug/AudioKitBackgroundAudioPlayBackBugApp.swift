@@ -11,7 +11,7 @@ import SwiftUI
 struct AudioKitBackgroundAudioPlayBackBugApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MusicToyView()
         }
     }
 }

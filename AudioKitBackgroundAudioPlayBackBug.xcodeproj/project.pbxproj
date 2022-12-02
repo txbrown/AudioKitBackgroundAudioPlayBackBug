@@ -11,6 +11,12 @@
 		B5979219293A6E6F0005B6ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979218293A6E6F0005B6ED /* ContentView.swift */; };
 		B597921B293A6E700005B6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B597921A293A6E700005B6ED /* Assets.xcassets */; };
 		B597921E293A6E700005B6ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B597921D293A6E700005B6ED /* Preview Assets.xcassets */; };
+		B5979225293A6E840005B6ED /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979224293A6E840005B6ED /* Conductor.swift */; };
+		B5979228293A6EE50005B6ED /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5979227293A6EE50005B6ED /* AudioKit */; };
+		B597922B293A6F060005B6ED /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = B597922A293A6F060005B6ED /* AudioKitUI */; };
+		B597922E293A6F2B0005B6ED /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = B597922D293A6F2B0005B6ED /* SoundpipeAudioKit */; };
+		B5979230293A6F600005B6ED /* CookbookKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597922F293A6F600005B6ED /* CookbookKnob.swift */; };
+		B5979237293A6FFD0005B6ED /* MIDI Files in Resources */ = {isa = PBXBuildFile; fileRef = B5979236293A6FFD0005B6ED /* MIDI Files */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		B5979218293A6E6F0005B6ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B597921A293A6E700005B6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B597921D293A6E700005B6ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5979224293A6E840005B6ED /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
+		B597922F293A6F600005B6ED /* CookbookKnob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookbookKnob.swift; sourceTree = "<group>"; };
+		B5979236293A6FFD0005B6ED /* MIDI Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MIDI Files"; path = "../../Cookbook/Cookbook/CookbookCommon/Sources/CookbookCommon/MIDI Files"; sourceTree = "<group>"; };
+		B5979238293A70700005B6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B597922B293A6F060005B6ED /* AudioKitUI in Frameworks */,
+				B5979228293A6EE50005B6ED /* AudioKit in Frameworks */,
+				B597922E293A6F2B0005B6ED /* SoundpipeAudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +64,14 @@
 		B5979215293A6E6F0005B6ED /* AudioKitBackgroundAudioPlayBackBug */ = {
 			isa = PBXGroup;
 			children = (
+				B5979238293A70700005B6ED /* Info.plist */,
+				B5979236293A6FFD0005B6ED /* MIDI Files */,
 				B5979216293A6E6F0005B6ED /* AudioKitBackgroundAudioPlayBackBugApp.swift */,
 				B5979218293A6E6F0005B6ED /* ContentView.swift */,
 				B597921A293A6E700005B6ED /* Assets.xcassets */,
 				B597921C293A6E700005B6ED /* Preview Content */,
+				B5979224293A6E840005B6ED /* Conductor.swift */,
+				B597922F293A6F600005B6ED /* CookbookKnob.swift */,
 			);
 			path = AudioKitBackgroundAudioPlayBackBug;
 			sourceTree = "<group>";
@@ -83,6 +100,11 @@
 			dependencies = (
 			);
 			name = AudioKitBackgroundAudioPlayBackBug;
+			packageProductDependencies = (
+				B5979227293A6EE50005B6ED /* AudioKit */,
+				B597922A293A6F060005B6ED /* AudioKitUI */,
+				B597922D293A6F2B0005B6ED /* SoundpipeAudioKit */,
+			);
 			productName = AudioKitBackgroundAudioPlayBackBug;
 			productReference = B5979213293A6E6F0005B6ED /* AudioKitBackgroundAudioPlayBackBug.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,11 @@
 				Base,
 			);
 			mainGroup = B597920A293A6E6F0005B6ED;
+			packageReferences = (
+				B5979226293A6EE50005B6ED /* XCRemoteSwiftPackageReference "AudioKit" */,
+				B5979229293A6F060005B6ED /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				B597922C293A6F2B0005B6ED /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+			);
 			productRefGroup = B5979214293A6E6F0005B6ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B597921E293A6E700005B6ED /* Preview Assets.xcassets in Resources */,
+				B5979237293A6FFD0005B6ED /* MIDI Files in Resources */,
 				B597921B293A6E700005B6ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5979219293A6E6F0005B6ED /* ContentView.swift in Sources */,
+				B5979225293A6E840005B6ED /* Conductor.swift in Sources */,
+				B5979230293A6F600005B6ED /* CookbookKnob.swift in Sources */,
 				B5979217293A6E6F0005B6ED /* AudioKitBackgroundAudioPlayBackBugApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +300,13 @@
 				DEVELOPMENT_TEAM = U9YF7XX37Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioKitBackgroundAudioPlayBackBug/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +331,13 @@
 				DEVELOPMENT_TEAM = U9YF7XX37Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioKitBackgroundAudioPlayBackBug/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +373,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5979226293A6EE50005B6ED /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.3;
+			};
+		};
+		B5979229293A6F060005B6ED /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+		B597922C293A6F2B0005B6ED /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SoundpipeAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5979227293A6EE50005B6ED /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5979226293A6EE50005B6ED /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		B597922A293A6F060005B6ED /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5979229293A6F060005B6ED /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+		B597922D293A6F2B0005B6ED /* SoundpipeAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B597922C293A6F2B0005B6ED /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
+			productName = SoundpipeAudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B597920B293A6E6F0005B6ED /* Project object */;
 }
